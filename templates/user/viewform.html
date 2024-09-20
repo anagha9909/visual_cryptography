@@ -1,0 +1,38 @@
+{% extends 'user/blank-page.html' %}
+{% block body %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="" method="get">
+    <table width="544" border="1" class="table table-secondary">
+  <tr>
+    <th  scope="col">#</th>
+    <th  scope="col">DATE</th>
+    <th  scope="col">FILE</th>
+    <th  scope="col">FILENAME</th>
+    <th  scope="col">TYPE</th>
+    <th  scope="col">NO OF PAGES</th>
+    <th  scope="col">&nbsp;</th>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ i['uploaddate'] }}</td>
+    <td><img src="{{ i['file'] }}" height="70" width="70"/></td>
+    <td>{{ i['filename'] }}</td>
+    <td>{{ i['type'] }}</td>
+    <td>{{ i['no_of_page'] }}</td>
+    <td><div align="center"><a href="/get_file/{{ i['fileid'] }}" class="btn btn-primary">Download</a></div></td>
+  </tr>
+    {% endfor %}
+</table>
+</form>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'admin/blank-page.html' %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-secondary">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">username</th>
+      <th scope="col">complaint</th>
+      <th scope="col">complaintdate</th>
+      <th scope="col"> </th>
+    </tr>
+    {% for i in data %}
+    <tr>
+      <td>&nbsp;{{ loop.index }}</td>
+      <td>&nbsp;{{ i ['userid'] }}</td>
+      <td>{{ i ['complaint'] }}</td>
+      <td>{{ i ['complaintdate'] }}</td>
+        <td><a href="/send_reply/{{ i['complaintid'] }}" class="btn btn-primary" >reply</a> </td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+</html>
+{% endblock %}

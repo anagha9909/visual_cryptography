@@ -1,0 +1,14 @@
+        from PIL import Image
+        import numpy as np
+        from  imageshuffle import imageshuffle
+        from  imageshuffle import imagescramble
+
+        img = Image.open(f_path)
+        ar = np.asarray(img)
+
+        key = 1234
+        s = imageshuffle.Rand(key)
+
+        enc = s.enc( ar )
+
+        img = Image. fromarray(enc)

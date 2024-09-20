@@ -1,0 +1,32 @@
+{% extends 'user/blank-page.html' %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body><form action="" method="post" enctype="multipart/form-data"><table width="541" border="1" class="table table-secondary">
+  <tr>
+    <th width="178" scope="row">SECRET KEY</th>
+    <td width="347"><label for="textfield"></label>
+      <div >
+        <input type="text" name="textfield" id="textfield" />
+      </div></td>
+  </tr>
+  <tr>
+    <th height="56" scope="row">CHOOSE YOUR SECRET FILE</th>
+    <th height="56" scope="row"><label for="BROWSE"></label>
+      <div >
+        <input type="file" name="BROWSE" id="BROWSE" />
+      </div></th>
+    </tr>
+  <tr>
+    <th height="58" colspan="2" scope="row"><center><input type="submit" name="button" id="button" value="Submit"class="btn btn-dark" /></center></th>
+    </tr>
+</table>
+</form>
+</body>
+</html>
+{% endblock %}

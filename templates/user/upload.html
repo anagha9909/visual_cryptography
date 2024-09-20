@@ -1,0 +1,31 @@
+{% extends 'user/blank-page.html' %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table width="411" border="1" class="table table-secondary">
+    <tr>
+        <td>Filename</td>
+      <th>
+      <input type="text" name="textfield" id="textfield" class="form-control"/></th>
+    </tr>
+    <tr>
+        <td>Choose file</td>
+      <th>
+      <input type="file" name="fileField" id="fileField" accept="image/*" /></th>
+    </tr>
+      <tr>
+      <td colspan="2"><center><input type="submit" name="Upload image" id="Upload image" value="upload" class="btn btn-dark"/></center</td>
+      
+    </tr>
+  </table>
+</form>
+</body>
+</html>
+{% endblock %}
